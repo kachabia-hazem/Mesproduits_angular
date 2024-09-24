@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>liste de produits</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let produit of produits">
+                    <tr>
+                        <td>{{produit}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
