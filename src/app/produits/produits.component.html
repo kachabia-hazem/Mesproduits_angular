@@ -9,15 +9,21 @@
     <div class="container">
         <div class="card shadow mb-4">
             <div class="card-body">
-            <table>
+            <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>liste de produits</th>
+                        <th>id</th><th>Nom</th><th>Prix</th><th>date de creation</th>
                     </tr>
                 </thead>
                 <tbody *ngFor="let produit of produits">
                     <tr>
-                        <td>{{produit}}</td>
+                        <td>{{produit.idProduit}}</td>
+                        <td>{{produit.nomProduit}}</td>
+                        <td>{{produit.prixProduit}}</td>
+                        <td>{{ produit?.dateCreation | date:'dd/MM/yyyy' }}</td>
+                        <td><a class="btn btn-danger" (click)="SupprimerProduit(produit)">Supprimer</a></td>
+                        <td><a class="btn btn-success"[routerLink]="['/updateProduit',produit.idProduit]">modifier</a></td>
+                       
                     </tr>
                 </tbody>
             </table>
